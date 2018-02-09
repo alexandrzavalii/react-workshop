@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<link rel="stylesheet" href="../Lesson3/App.css">
+
+
+
+<body>
+
+  <script>
+    var app = angular.module("myShoppingList", []);
+    app.controller("myCtrl", function ($scope) {
+      const list = Array.from({ length: 1000 }, (v, k) => k + 1);
+      $scope.numbers = list;
+      $scope.addOneRow = function () {
+        $scope.numbers.unshift($scope.numbers.length + 1);
+      }
+
+    });
+
+  </script>
+
+  <div ng-app="myShoppingList" ng-controller="myCtrl">
+
+    <div class="App">
+      <header class="App-header">
+        <h1 class="App-title">Lesson 6: Lists and Keys</h1>
+      </header>
+      <div class="Component">
+        <h2>List</h2>
+        <button ng-click="start();addOneRow()">add one row</button>
+        <div>
+          <ul>
+            <li style="padding: 10px; color: purple; text-align: left; border-bottom: 1px solid gray;" ng-repeat="x in numbers">Row Number: {{x}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

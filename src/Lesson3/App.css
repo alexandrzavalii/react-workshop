@@ -1,0 +1,18 @@
+.App{
+    text-align: center;
+}
+.Component {
+    text-align: left;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+}
+.Component div{
+    background-color: rgba(0, 128, 0, 0.31);
+    padding: 10px;    
+    text-align: center;
+}
+.Component div button {
+    padding: 30px;
+    font-size: 20px;
+}
